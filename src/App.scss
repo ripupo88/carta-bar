@@ -1,0 +1,73 @@
+$bg: #fff;
+$dark: darken($bg, 15);
+
+
+/* * * * * * * * * * * 
+*      Dot Leader
+* * * * * * * * * * * */
+
+ul.leaders {
+  max-width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+  
+  li:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    color: #000;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  }
+  
+  span:first-child {
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-right: 0.33em;
+    background: $bg;
+  }
+  
+  span + span {
+    float: right;
+    padding-left: 0.33em;
+    background: $bg;
+  }
+  
+  span + span:before {
+    content: '€';
+    padding-right: 0.15em;
+  }
+}
+
+.fancy-rule {
+  border:none;
+  width:100%;
+  overflow:hidden;
+  height:20px;
+  text-align: center;
+  color: $dark;
+}
+.rgba {
+  color: rgba(0,0,0,0.15);
+}
+.fancy-rule.asterism:before {
+  content:"o————|| ⧖ ||————o";
+  letter-spacing:1px;
+  
+}
+
+/* Page setup & Styling */
+*::selection {
+  background-color: #1a1a1a;
+  color: aliceblue;
+}
+body {
+  background-color: $bg;
+  color: #000000;
+  font-family: 'Avenir Next', sans-serif;
+}
+section {
+  position: absolute;
+  left: calc(100% - 14em);
+  width: 100%;
+}
